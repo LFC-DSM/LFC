@@ -16,14 +16,6 @@ pnpm install   # also installs git hooks (Husky)
 
 See `AGENTS.md` for detailed setup instructions and project conventions.
 
-## Getting Started
-
-Install all dependencies from the root:
-
-```bash
-pnpm install
-```
-
 ## Scripts
 
 All scripts run from the repo root.
@@ -42,6 +34,15 @@ To target a specific app:
 pnpm --filter backend dev
 pnpm --filter frontend build
 ```
+
+## Git Hooks
+
+Managed by [Husky](https://typicode.github.io/husky/), installed automatically on `pnpm install`.
+
+| Hook         | Runs                             | Blocks commit if                                   |
+| ------------ | -------------------------------- | -------------------------------------------------- |
+| `pre-commit` | `pnpm format:check`, `pnpm lint` | Any file is unformatted or has a lint error        |
+| `commit-msg` | `scripts/check-commit-msg.mjs`   | Message prefix doesn't follow Conventional Commits |
 
 ## Dependency Management
 
