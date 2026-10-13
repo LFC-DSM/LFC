@@ -7,7 +7,7 @@ This is a **pnpm monorepo** with two apps:
 | `backend`  | `apps/backend/`  | NestJS 10, TypeScript (CommonJS)      |
 | `frontend` | `apps/frontend/` | Vite 6, React 18, TypeScript (ESNext) |
 
-## Tools
+## Pnpm usage
 
 Always use **`pnpm`** — never `npm` or `yarn`. All pnpm settings go in `pnpm-workspace.yaml` (camelCase); `.npmrc` is for auth/registry credentials only.
 
@@ -24,7 +24,7 @@ pnpm --filter backend dev     # target a specific app
 pnpm --filter frontend build
 ```
 
-## Dependency management
+### Dependency management
 
 Shared tool versions are centralized in the `catalog` block of `pnpm-workspace.yaml`:
 
@@ -47,32 +47,6 @@ pnpm --filter frontend add -D <package>
 ```
 
 If you add a dep that will be shared (e.g. a shared linting tool), add it to the catalog in `pnpm-workspace.yaml` first and reference it with `catalog:`.
-
-## TypeScript
-
-The two apps have **different module systems** — do not mix configs between them.
-
-|                          | backend                                        | frontend                                                       |
-| ------------------------ | ---------------------------------------------- | -------------------------------------------------------------- |
-| `module`                 | `commonjs`                                     | `ESNext` (bundler)                                             |
-| `moduleResolution`       | default (node)                                 | `bundler`                                                      |
-| `experimentalDecorators` | `true`                                         | —                                                              |
-| `emitDecoratorMetadata`  | `true`                                         | —                                                              |
-| `jsx`                    | —                                              | `react-jsx`                                                    |
-| tsconfig                 | single `tsconfig.json` + `tsconfig.build.json` | project references (`tsconfig.app.json`, `tsconfig.node.json`) |
-
-## Formatting
-
-Prettier is configured once at the root in `prettier.config.js`. Do not create per-app Prettier configs. Settings: no semicolons, single quotes, trailing commas, 100-char line width, 2-space indent.
-
-## Linting
-
-Each app has its own `eslint.config.js` using ESLint 9 flat config + `typescript-eslint`. **There is no shared ESLint config** — keep them separate.
-
-- **backend**: Node.js globals, `no-console` off, `@typescript-eslint/no-explicit-any` warn
-- **frontend**: browser globals, `react-hooks`, `react-refresh` plugins
-
-Do not add a root-level `eslint.config.js`.
 
 ## NestJS conventions (backend)
 

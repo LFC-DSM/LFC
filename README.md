@@ -2,59 +2,19 @@
 
 A pnpm monorepo containing `backend` and `frontend` apps.
 
-## Structure
+## Initialization
 
-```
-lfc/
-├── apps/
-│   ├── backend/       # Node.js backend application
-│   └── frontend/      # Frontend application (Vite)
-├── package.json       # Root scripts & shared devDependencies
-├── pnpm-workspace.yaml  # Workspace config, package catalog, pnpm settings
-├── prettier.config.js # Global formatter config (shared by all apps)
-└── .prettierignore
-```
-
-## Version management
-
-This project pins exact versions via `package.json`:
-
-| Tool    | Version |
-| ------- | ------- |
-| Node.js | 25.2.1  |
-| pnpm    | 9.5.0   |
-
-Using a mismatched version will hard-fail (`onFail: "error"`).
-
-### Node.js
-
-Use [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm) to install and switch versions:
+Install the right Node version with [nvm](https://github.com/nvm-sh/nvm) or
+[fnm](https://github.com/Schniz/fnm), then activate the right pnpm version via
+[Corepack](https://nodejs.org/api/corepack.html):
 
 ```bash
-# nvm
-nvm install 25.2.1
-nvm use 25.2.1
-
-# fnm
-fnm install 25.2.1
-fnm use 25.2.1
-```
-
-### pnpm
-
-Use [Corepack](https://nodejs.org/api/corepack.html) (ships with Node.js) — it reads `"packageManager"` from `package.json` and activates the correct pnpm version automatically:
-
-```bash
+fnm use        # or: nvm use
 corepack enable
+pnpm install   # also installs git hooks (Husky)
 ```
 
-After that, running any `pnpm` command in this repo will use pnpm 9.5.0. No manual installation needed.
-
-Alternatively, install directly:
-
-```bash
-npm install -g pnpm@9.5.0
-```
+See `AGENTS.md` for detailed setup instructions and project conventions.
 
 ## Getting Started
 
