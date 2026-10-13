@@ -1,0 +1,29 @@
+{
+  "name": "lfc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "packageManager": "pnpm@9.5.0",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "9.5.0",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "25.2.1",
+      "onFail": "error"
+    }
+  },
+  "devDependencies": {
+    "prettier": "catalog:"
+  }
+}

@@ -1,0 +1,23 @@
+# Environment
+.DS_Store
+
+# Node
+node_modules
+.pnpm-store
+
+# Environment variables
+.env
+.env.local
+
+# Build artifacts
+dist
+build
+
+# Editors
+.agent-shell
+settings.local.json
+*~
+\#*\#
+.#*
+*-autoloads.el
+*.elc

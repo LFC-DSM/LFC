@@ -1,0 +1,14 @@
+packages:
+  - 'apps/*'
+
+# Centralized dependency versions — reference with `catalog:` in package.json
+catalog:
+  prettier: ^3.4.2
+  typescript: ^5.8.0
+  typescript-eslint: ^8.0.0
+  '@eslint/js': ^9.0.0
+  eslint: ^9.0.0
+  globals: ^16.0.0
+
+linkWorkspacePackages: true
+sharedWorkspaceLockfile: true
