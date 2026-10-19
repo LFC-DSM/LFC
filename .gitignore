@@ -12,6 +12,7 @@ node_modules
 # Build artifacts
 dist
 build
+*.tsbuildinfo
 
 # Editors
 .agent-shell
