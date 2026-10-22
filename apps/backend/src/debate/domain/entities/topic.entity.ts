@@ -1,21 +1,21 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
 import { Debate } from './debate.entity'
 import { DebateSelect } from './debate-select.entity'
 
 @Entity('topic')
 export class Topic {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
   @Column({ length: 1000 })
-  topic!: string
+  topic: string
 
   @Column({ type: 'int', default: 0 })
-  votes!: number
+  votes: number
 
-  @OneToMany(() => Debate, (debate) => debate.selectedTopic)
-  debates!: Debate[]
+  @ManyToOne(() => Debate, (debate) => debate.topics)
+  debate: Debate
 
   @OneToMany(() => DebateSelect, (ds) => ds.topic)
-  debateSelects!: DebateSelect[]
+  debateSelects: DebateSelect[]
 }

@@ -6,14 +6,14 @@ import { LlmMessage } from '../../../debate/domain/entities/llm-message.entity'
 @Entity('emoji')
 export class Emoji {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
   @ManyToOne(() => Member, { nullable: false })
-  member!: Member
+  member: Member
 
-  @ManyToOne(() => Item, (item) => item.emojis, { nullable: false })
-  item!: Item
+  @ManyToOne(() => Item, (item) => item.emojis)
+  item: Item
 
   @ManyToOne(() => LlmMessage, { nullable: false })
-  message!: LlmMessage
+  message: LlmMessage
 }

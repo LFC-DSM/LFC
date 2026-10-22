@@ -5,11 +5,11 @@ import { Topic } from './topic.entity'
 @Entity('debate_select')
 export class DebateSelect {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
-  @ManyToOne(() => Member, { nullable: false })
-  member!: Member
+  @ManyToOne(() => Member)
+  member: Member
 
-  @ManyToOne(() => Topic, (topic) => topic.debateSelects, { nullable: false })
-  topic!: Topic
+  @ManyToOne(() => Topic, (topic) => topic.debateSelects)
+  topic: Topic
 }

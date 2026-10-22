@@ -5,14 +5,14 @@ import { Debate } from './debate.entity'
 @Entity('bet')
 export class Bet {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
-  @ManyToOne(() => Member, { nullable: false })
-  member!: Member
+  @ManyToOne(() => Member)
+  member: Member
 
-  @ManyToOne(() => Debate, { nullable: false })
-  debate!: Debate
+  @ManyToOne(() => Debate)
+  debate: Debate
 
   @Column({ type: 'decimal', precision: 10, scale: 2 })
-  amount!: number
+  amount: number
 }
