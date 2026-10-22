@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: lfc-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: lfc
+      MYSQL_USER: lfc
+      MYSQL_PASSWORD: password
+    ports:
+      - '3306:3306'
+    volumes:
+      - lfc-mysql-data:/var/lib/mysql
+
+volumes:
+  lfc-mysql-data:
