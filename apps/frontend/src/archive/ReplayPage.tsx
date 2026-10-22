@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from 'react'
+import clsx from 'clsx'
+
 export default function ReplayPage() {
   const [tocOpen, setTocOpen] = useState(true)
   return (
@@ -21,7 +23,7 @@ export default function ReplayPage() {
       >
         ☷ 토론 목차 {tocOpen ? '접기' : '열기'}
       </button>
-      <div className={`debate-layout ${tocOpen ? '' : 'toc-closed'}`}>
+      <div className={clsx('debate-layout', { 'toc-closed': !tocOpen })}>
         {tocOpen ? (
           <aside className="panel toc">
             <h3>토론 목차</h3>

@@ -1,4 +1,6 @@
+import clsx from 'clsx'
 import { categories, products } from './products'
+
 export default function ShopPage() {
   return (
     <>
@@ -18,7 +20,11 @@ export default function ShopPage() {
       </div>
       <div className="tabs" aria-label="상품 분류">
         {categories.map((category) => (
-          <button type="button" key={category.id} className={category.id === 'all' ? 'active' : ''}>
+          <button
+            type="button"
+            key={category.id}
+            className={clsx({ active: category.id === 'all' })}
+          >
             {category.name}
           </button>
         ))}
@@ -26,7 +32,7 @@ export default function ShopPage() {
       <div className="grid" id="products">
         {products.map((product) => (
           <article key={product.name} className="card product">
-            <div className={'product-art ' + product.color}>
+            <div className={clsx('product-art', product.color)}>
               {product.icon === 'highlight' ? (
                 <div className="chat-preview">✦ 서연　좋은 생각은 더 잘 보이게.</div>
               ) : (
