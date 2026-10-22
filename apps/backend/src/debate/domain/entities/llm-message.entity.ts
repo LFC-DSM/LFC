@@ -9,14 +9,14 @@ export enum LlmMessageType {
 @Entity('llm_message')
 export class LlmMessage {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
-  @ManyToOne(() => Debate, (debate) => debate.llmMessages, { nullable: false })
-  debate!: Debate
+  @ManyToOne(() => Debate, (debate) => debate.llmMessages)
+  debate: Debate
 
   @Column({ type: 'int' })
-  messageIndex!: number
+  messageIndex: number
 
   @Column({ type: 'enum', enum: LlmMessageType })
-  type!: LlmMessageType
+  type: LlmMessageType
 }

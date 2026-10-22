@@ -5,14 +5,14 @@ import { Item } from './item.entity'
 @Entity('member_item')
 export class MemberItem {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
-  @ManyToOne(() => Member, { nullable: false })
-  member!: Member
+  @ManyToOne(() => Member)
+  member: Member
 
-  @ManyToOne(() => Item, (item) => item.memberItems, { nullable: false })
-  item!: Item
+  @ManyToOne(() => Item, (item) => item.memberItems)
+  item: Item
 
   @Column({ type: 'int', default: 1 })
-  quantity!: number
+  quantity: number
 }

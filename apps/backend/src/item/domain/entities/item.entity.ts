@@ -11,20 +11,20 @@ export enum ItemType {
 @Entity('item')
 export class Item {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
   @Column({ type: 'enum', enum: ItemType })
-  type!: ItemType
+  type: ItemType
 
   @Column({ type: 'decimal', precision: 10, scale: 2 })
-  price!: number
+  price: number
 
   @Column({ length: 128 })
-  name!: string
+  name: string
 
   @OneToMany(() => MemberItem, (mi) => mi.item)
-  memberItems!: MemberItem[]
+  memberItems: MemberItem[]
 
   @OneToMany(() => Emoji, (emoji) => emoji.item)
-  emojis!: Emoji[]
+  emojis: Emoji[]
 }

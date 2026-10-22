@@ -9,14 +9,14 @@ export enum MoneyLogType {
 @Entity('money_log')
 export class MoneyLog {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
-  @ManyToOne(() => Member, (member) => member.moneyLogs, { nullable: false })
-  member!: Member
+  @ManyToOne(() => Member, (member) => member.moneyLogs)
+  member: Member
 
   @Column({ type: 'enum', enum: MoneyLogType })
-  type!: MoneyLogType
+  type: MoneyLogType
 
   @Column({ type: 'decimal', precision: 10, scale: 2 })
-  amount!: number
+  amount: number
 }

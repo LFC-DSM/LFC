@@ -4,17 +4,17 @@ import { MoneyLog } from './money-log.entity'
 @Entity('member')
 export class Member {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
   @Column({ unique: true })
-  email!: string
+  email: string
 
   @Column()
-  password!: string
+  password: string
 
   @Column()
-  username!: string
+  username: string
 
   @OneToMany(() => MoneyLog, (moneyLog) => moneyLog.member)
-  moneyLogs!: MoneyLog[]
+  moneyLogs: MoneyLog[]
 }

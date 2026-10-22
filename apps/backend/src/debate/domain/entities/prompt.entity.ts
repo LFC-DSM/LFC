@@ -10,17 +10,17 @@ export enum PromptType {
 @Entity('prompt')
 export class Prompt {
   @PrimaryGeneratedColumn({ type: 'bigint' })
-  id!: number
+  id: number
 
-  @ManyToOne(() => Debate, (debate) => debate.prompts, { nullable: false })
-  debate!: Debate
+  @ManyToOne(() => Debate, (debate) => debate.prompts)
+  debate: Debate
 
   @Column({ type: 'enum', enum: PromptType })
-  type!: PromptType
+  type: PromptType
 
   @Column({ type: 'text' })
-  contents!: string
+  contents: string
 
   @OneToMany(() => Comment, (comment) => comment.prompt)
-  comments!: Comment[]
+  comments: Comment[]
 }
