@@ -32,9 +32,6 @@ export default function Day1Page() {
             </CandidateHead>
             <CandidateTitle>{topic.title}</CandidateTitle>
             <CandidateDesc>{topic.description}</CandidateDesc>
-            <CandidateFoot>
-              <CandidateMark aria-hidden="true">↗</CandidateMark>
-            </CandidateFoot>
           </Candidate>
         ))}
       </VoteSelection>
@@ -108,24 +105,4 @@ const CandidateDesc = styled.p`
   color: var(--muted);
   line-height: 1.9;
   margin: 0 0 28px;
-`
-
-const CandidateFoot = styled.div`
-  margin-top: auto;
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`
-
-const CandidateMark = styled.span`
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--stroke);
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #f5f7ef;
-  font-size: 20px;
 `
