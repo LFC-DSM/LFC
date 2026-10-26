@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Btn } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow } from './RoundLayouts'
 
 export default function Day3Page() {
@@ -59,9 +60,9 @@ export default function Day3Page() {
       </DebateEntrance>
       <QuietRow>
         <p>이전에는 어떤 이야기를 나눴을까요?</p>
-        <a href="?page=archive" className="btn">
+        <Btn as="a" href="?page=archive">
           지난 토론 둘러보기 ↗
-        </a>
+        </Btn>
       </QuietRow>
     </RoundScreen>
   )

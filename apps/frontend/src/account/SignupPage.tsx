@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Btn } from '../design/Button'
+
 export default function SignupPage() {
   return (
     <>
@@ -15,9 +17,9 @@ export default function SignupPage() {
           placeholder="이메일을 입력하세요"
           autoComplete="email"
         />
-        <button className="btn small" css={{ marginTop: '10px' }}>
+        <Btn small css={{ marginTop: '10px', width: '100%' }}>
           인증 메일 보내기
-        </button>
+        </Btn>
         <label htmlFor="auth-code">이메일 인증번호</label>
         <input id="auth-code" placeholder="인증번호 6자리" inputMode="numeric" />
         <label htmlFor="auth-pw">비밀번호</label>
@@ -34,9 +36,9 @@ export default function SignupPage() {
           placeholder="비밀번호를 다시 입력하세요"
           autoComplete="new-password"
         />
-        <a className="btn primary" href="?page=login">
+        <Btn primary as="a" href="?page=login" css={{ width: '100%', marginTop: '26px' }}>
           회원가입
-        </a>
+        </Btn>
         <p className="sub" css={{ textAlign: 'center', marginTop: '24px' }}>
           이미 계정이 있나요?{' '}
           <a css={{ color: 'var(--jade)' }} href="?page=login">

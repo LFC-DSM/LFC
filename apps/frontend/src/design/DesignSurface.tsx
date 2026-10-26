@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-/** Neo-brutalist presentation: restrained outlines, hard shadows, flat colour. */
 export const DesignSurface = styled.div`
   min-height: 100vh;
   header {
@@ -148,41 +147,6 @@ export const DesignSurface = styled.div`
     line-height: 1.95;
     color: var(--muted);
     margin: 0 0 26px;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    padding: 12px 20px;
-    min-height: 45px;
-    font-weight: 700;
-    font-size: 16px;
-    border: 1.5px solid var(--stroke);
-    border-radius: 4px;
-    background: white;
-    color: var(--ink);
-    box-shadow: 3px 3px 0 var(--stroke);
-    transition:
-      transform 0.15s,
-      box-shadow 0.15s;
-  }
-  .btn:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 var(--stroke);
-  }
-  .btn:active {
-    transform: translate(3px, 3px);
-    box-shadow: none;
-  }
-  .btn.primary {
-    background: var(--jade);
-  }
-  .btn.small {
-    font-size: 14px;
-    min-height: 36px;
-    padding: 8px 12px;
-    box-shadow: 2px 2px 0 var(--stroke);
   }
   .section-title {
     display: flex;
@@ -601,10 +565,6 @@ export const DesignSurface = styled.div`
     letter-spacing: -1px;
     margin-bottom: 15px;
   }
-  .auth .btn {
-    width: 100%;
-    margin-top: 26px;
-  }
   .muted {
     color: var(--muted);
   }
@@ -768,10 +728,6 @@ export const DesignSurface = styled.div`
     .hero p {
       font-size: 17px;
     }
-    .hero .btn {
-      width: 100%;
-      font-size: 16px;
-    }
     .grid {
       grid-template-columns: minmax(0, 1fr);
       gap: 22px;
@@ -894,11 +850,6 @@ export const DesignSurface = styled.div`
     .auth {
       margin: 25px auto;
       padding: 28px 22px;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .btn {
-      transition: none;
     }
   }
 `

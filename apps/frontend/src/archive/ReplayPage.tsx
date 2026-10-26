@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from 'react'
 import clsx from 'clsx'
+import { Btn } from '../design/Button'
 
 export default function ReplayPage() {
   const [tocOpen, setTocOpen] = useState(true)
@@ -13,16 +14,17 @@ export default function ReplayPage() {
       </div>
       <div className="topline" css={{ marginBottom: '20px' }}>
         <span className="badge">종료된 토론</span>
-        <button className="btn small">♫ 음성으로 듣기</button>
+        <Btn small>♫ 음성으로 듣기</Btn>
       </div>
-      <button
+      <Btn
+        small
         type="button"
-        className="btn small toc-toggle"
+        className="toc-toggle"
         aria-expanded={tocOpen}
         onClick={() => setTocOpen((open) => !open)}
       >
         ☷ 토론 목차 {tocOpen ? '접기' : '열기'}
-      </button>
+      </Btn>
       <div className={clsx('debate-layout', { 'toc-closed': !tocOpen })}>
         {tocOpen ? (
           <aside className="panel toc">
@@ -160,7 +162,7 @@ export default function ReplayPage() {
               <a className="sub" href="?page=shop">
                 ✦ 강조 아이템
               </a>
-              <button className="btn small">전송 ↑</button>
+              <Btn small>전송 ↑</Btn>
             </div>
           </div>
           <p className="empty-note">

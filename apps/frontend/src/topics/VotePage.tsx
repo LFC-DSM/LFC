@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Btn } from '../design/Button'
+
 export default function VotePage() {
   return (
     <>
@@ -34,9 +36,9 @@ export default function VotePage() {
           </div>
           <div className="card-footer">
             <a href="?page=topic&id=0">주제 자세히 보기 ↗</a>
-            <button className="btn small" type="button">
+            <Btn small type="button">
               투표하기
-            </button>
+            </Btn>
           </div>
         </article>
         <article className="card">
@@ -59,9 +61,9 @@ export default function VotePage() {
           </div>
           <div className="card-footer">
             <a href="?page=topic&id=1">주제 자세히 보기 ↗</a>
-            <button className="btn small" type="button">
+            <Btn small type="button">
               투표하기
-            </button>
+            </Btn>
           </div>
         </article>
         <article className="card">
@@ -84,9 +86,9 @@ export default function VotePage() {
           </div>
           <div className="card-footer">
             <a href="?page=topic&id=2">주제 자세히 보기 ↗</a>
-            <button className="btn small" type="button">
+            <Btn small type="button">
               투표하기
-            </button>
+            </Btn>
           </div>
         </article>
       </div>

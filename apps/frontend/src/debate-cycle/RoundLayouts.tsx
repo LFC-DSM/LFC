@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Btn } from '../design/Button'
 
 export const RoundScreen = styled.section``
 
@@ -45,11 +46,6 @@ export const QuietRow = styled.div`
     font-size: 15px;
     color: var(--muted);
     line-height: 1.9;
-  }
-  @media (max-width: 720px) {
-    .btn {
-      width: 100%;
-    }
   }
 `
 

@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { Btn } from '../design/Button'
 
 export interface HeaderUser {
   name: string
@@ -50,9 +51,9 @@ export default function Header({ user }: HeaderProps) {
       </a>
       <div className="account">
         <a href="?page=login">로그인</a>
-        <a className="btn primary small" href="?page=signup">
+        <Btn primary small as="a" href="?page=signup">
           회원가입
-        </a>
+        </Btn>
       </div>
     </header>
   )

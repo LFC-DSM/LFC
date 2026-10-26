@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Btn } from '../design/Button'
+
 export default function BetPage() {
   return (
     <>
@@ -28,7 +30,7 @@ export default function BetPage() {
               <span className="badge">반대</span>
               <h3>창작의 주체는 인간</h3>
               <p>AI 창작물의 권리는 신중해야 합니다.</p>
-              <button className="btn small">진영 선택</button>
+              <Btn small>진영 선택</Btn>
             </div>
           </div>
           <div className="notice">
@@ -44,18 +46,18 @@ export default function BetPage() {
           <label htmlFor="bet">베팅할 TK</label>
           <input id="bet" type="number" min="0" placeholder="베팅 금액을 입력하세요" />
           <div className="amount">
-            <button className="btn small">+100</button>
-            <button className="btn small">+500</button>
-            <button className="btn small">+1,000</button>
+            <Btn small>+100</Btn>
+            <Btn small>+500</Btn>
+            <Btn small>+1,000</Btn>
           </div>
           <hr className="divider" />
           <div className="summary">
             <span>선택한 진영</span>
             <b css={{ color: 'var(--jade)' }}>찬성</b>
           </div>
-          <a className="btn primary" href="?page=prompt">
+          <Btn primary as="a" href="?page=prompt">
             베팅 후 프롬프트 작성 <span>↗</span>
-          </a>
+          </Btn>
           <p className="empty-note">
             TK는 출석 체크와 베팅 승리 등으로 얻습니다. 상점에서 사용하는 CRD와는 별개입니다.
           </p>

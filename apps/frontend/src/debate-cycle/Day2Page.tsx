@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Btn } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow, SampleNote } from './RoundLayouts'
 
 export default function Day2Page() {
@@ -54,9 +55,9 @@ export default function Day2Page() {
             </AmountValue>
             <SideBottom>
               <span>찬성 진영</span>
-              <a className="btn" href="?page=bet">
+              <Btn as="a" href="?page=bet">
                 베팅하러 가기 ↗
-              </a>
+              </Btn>
             </SideBottom>
           </Side>
           <Side con>
@@ -76,9 +77,9 @@ export default function Day2Page() {
             </AmountValue>
             <SideBottom>
               <span>반대 진영</span>
-              <a className="btn" href="?page=bet">
+              <Btn as="a" href="?page=bet">
                 베팅하러 가기 ↗
-              </a>
+              </Btn>
             </SideBottom>
           </Side>
         </Sides>
@@ -88,9 +89,9 @@ export default function Day2Page() {
           이미 진영을 선택했나요?
           <br />내 진영의 프롬프트를 함께 다듬어보세요.
         </p>
-        <a className="btn primary" href="?page=prompt">
+        <Btn primary as="a" href="?page=prompt">
           내 진영 프롬프트 작성 ↗
-        </a>
+        </Btn>
       </QuietRow>
       <SampleNote>
         베팅 금액과 비율은 화면 구성을 위한 예시 데이터입니다. TK는 베팅, CRD는 상점에서 사용합니다.
@@ -291,7 +292,7 @@ const SideBottom = styled.div`
     font-size: 14px;
   }
   @media (max-width: 720px) {
-    .btn {
+    ${Btn} {
       width: 100%;
     }
   }
