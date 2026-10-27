@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Btn } from '../design/Button'
+
 export default function PromptPage() {
   return (
     <>
@@ -64,7 +66,7 @@ export default function PromptPage() {
               <a className="sub" href="?page=shop">
                 ✦ 강조 아이템
               </a>
-              <button className="btn small">전송 ↑</button>
+              <Btn small>전송 ↑</Btn>
             </div>
           </div>
         </aside>

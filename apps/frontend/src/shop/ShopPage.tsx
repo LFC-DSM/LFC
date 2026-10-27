@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { Btn } from '../design/Button'
 import { categories, products } from './products'
 
 export default function ShopPage() {
@@ -44,9 +45,9 @@ export default function ShopPage() {
             <p>{product.description}</p>
             <div className="product-price">
               <b className="coin">✦ {product.price.toLocaleString()} CRD</b>
-              <button type="button" className="btn small">
+              <Btn small type="button">
                 구매하기
-              </button>
+              </Btn>
             </div>
           </article>
         ))}

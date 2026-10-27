@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Btn } from '../design/Button'
+
 export default function LoginPage() {
   return (
     <>
@@ -20,9 +22,9 @@ export default function LoginPage() {
           placeholder="비밀번호를 입력하세요"
           autoComplete="current-password"
         />
-        <a className="btn primary" href="?page=home">
+        <Btn primary as="a" href="?page=home" css={{ width: '100%', marginTop: '26px' }}>
           로그인
-        </a>
+        </Btn>
         <p className="sub" css={{ textAlign: 'center', marginTop: '24px' }}>
           아직 계정이 없나요?{' '}
           <a

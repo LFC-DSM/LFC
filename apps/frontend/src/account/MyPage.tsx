@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Btn } from '../design/Button'
+
 export default function MyPage() {
   return (
     <>
@@ -32,9 +34,9 @@ export default function MyPage() {
                 <input id="email" type="email" defaultValue="seoyeon@example.com" />
               </div>
             </div>
-            <button className="btn primary small" css={{ marginTop: '22px' }}>
+            <Btn primary small css={{ marginTop: '22px' }}>
               변경사항 저장
-            </button>
+            </Btn>
             <hr className="divider" />
             <h3>비밀번호 변경</h3>
             <label htmlFor="current-pw">현재 비밀번호</label>
@@ -64,9 +66,9 @@ export default function MyPage() {
                 />
               </div>
             </div>
-            <button className="btn small" css={{ marginTop: '20px' }}>
+            <Btn small css={{ marginTop: '20px' }}>
               비밀번호 변경
-            </button>
+            </Btn>
           </div>
           <div className="panel" id="balances" css={{ marginTop: '20px' }}>
             <h3>내 재화</h3>
@@ -98,9 +100,9 @@ export default function MyPage() {
             <hr className="divider" />
             <div className="topline">
               <span className="sub">계정을 더 이상 사용하지 않으시나요?</span>
-              <button className="btn small" css={{ color: '#ad7870' }}>
+              <Btn small css={{ color: '#ad7870' }}>
                 회원탈퇴
-              </button>
+              </Btn>
             </div>
           </div>
         </section>
