@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from 'react-router-dom'
 import { eyeBrowCss } from '../design/Eyebrow'
+import { Badge } from '../design/Badge'
 
 export default function ArchivePage() {
   return (
@@ -37,7 +38,7 @@ export default function ArchivePage() {
               </td>
               <td className="muted">10. 18</td>
               <td>
-                <span className="badge">토론 종료</span>
+                <Badge>토론 종료</Badge>
               </td>
               <td>
                 <Link to="/archive/replay" aria-label="토론 다시 보기">
@@ -52,7 +53,7 @@ export default function ArchivePage() {
               </td>
               <td className="muted">10. 15</td>
               <td>
-                <span className="badge">토론 종료</span>
+                <Badge>토론 종료</Badge>
               </td>
               <td>
                 <Link to="/archive/replay" aria-label="토론 다시 보기">
@@ -67,7 +68,7 @@ export default function ArchivePage() {
               </td>
               <td className="muted">10. 12</td>
               <td>
-                <span className="badge">토론 종료</span>
+                <Badge>토론 종료</Badge>
               </td>
               <td>
                 <Link to="/archive/replay" aria-label="토론 다시 보기">
@@ -84,7 +85,7 @@ export default function ArchivePage() {
               </td>
               <td className="muted">10. 9</td>
               <td>
-                <span className="badge">토론 종료</span>
+                <Badge>토론 종료</Badge>
               </td>
               <td>
                 <Link to="/archive/replay" aria-label="토론 다시 보기">
@@ -99,7 +100,7 @@ export default function ArchivePage() {
               </td>
               <td className="muted">10. 6</td>
               <td>
-                <span className="badge">토론 종료</span>
+                <Badge>토론 종료</Badge>
               </td>
               <td>
                 <Link to="/archive/replay" aria-label="토론 다시 보기">
@@ -116,7 +117,7 @@ export default function ArchivePage() {
               </td>
               <td className="muted">10. 3</td>
               <td>
-                <span className="badge">토론 종료</span>
+                <Badge>토론 종료</Badge>
               </td>
               <td>
                 <Link to="/archive/replay" aria-label="토론 다시 보기">
