@@ -35,7 +35,6 @@ export default function VotePage() {
             <span className="sub">예시 투표 현황</span>
           </div>
           <div className="card-footer">
-            <a href="?page=topic&id=0">주제 자세히 보기 ↗</a>
             <Btn small type="button">
               투표하기
             </Btn>
@@ -60,7 +59,6 @@ export default function VotePage() {
             <span className="sub">예시 투표 현황</span>
           </div>
           <div className="card-footer">
-            <a href="?page=topic&id=1">주제 자세히 보기 ↗</a>
             <Btn small type="button">
               투표하기
             </Btn>
@@ -85,7 +83,6 @@ export default function VotePage() {
             <span className="sub">예시 투표 현황</span>
           </div>
           <div className="card-footer">
-            <a href="?page=topic&id=2">주제 자세히 보기 ↗</a>
             <Btn small type="button">
               투표하기
             </Btn>

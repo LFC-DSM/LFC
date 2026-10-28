@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
-import { Btn } from '../design/Button'
+import { Btn, BtnLink } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow } from './RoundLayouts'
 
 export default function Day3Page() {
@@ -32,7 +33,7 @@ export default function Day3Page() {
             </div>
           </Team>
         </MatchHeader>
-        <EnterLink href="?page=debate">
+        <EnterLink to="/debate">
           <EnterKicker>
             <span>두 관점이 만나는 순간</span>
             <LiveTag>● LIVE DEBATE</LiveTag>
@@ -60,9 +61,7 @@ export default function Day3Page() {
       </DebateEntrance>
       <QuietRow>
         <p>이전에는 어떤 이야기를 나눴을까요?</p>
-        <Btn as="a" href="?page=archive">
-          지난 토론 둘러보기 ↗
-        </Btn>
+        <BtnLink to="/archive">지난 토론 둘러보기 ↗</BtnLink>
       </QuietRow>
     </RoundScreen>
   )
@@ -141,7 +140,7 @@ const VersusWord = styled.span`
   }
 `
 
-const EnterLink = styled.a`
+const EnterLink = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 27px;

@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { Btn } from '../design/Button'
 
@@ -154,9 +155,9 @@ export default function DebatePage() {
             <label htmlFor="message">메시지</label>
             <input id="message" placeholder="함께 의견을 나눠보세요" />
             <div className="topline" css={{ marginTop: '10px' }}>
-              <a className="sub" href="?page=shop">
+              <Link className="sub" to="/shop">
                 ✦ 강조 아이템
-              </a>
+              </Link>
               <Btn small>전송 ↑</Btn>
             </div>
           </div>

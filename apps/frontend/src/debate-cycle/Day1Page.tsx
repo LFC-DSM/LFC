@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
-import { Btn } from '../design/Button'
+import { Btn, BtnLink } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow } from './RoundLayouts'
 
 const topics = [
@@ -42,9 +43,9 @@ export default function Day1Page() {
           <br />
           주제의 배경과 양측 관점을 먼저 살펴보세요.
         </p>
-        <Btn primary as="a" href="?page=vote">
+        <BtnLink to="/vote">
           주제 투표하러 가기 <span>↗</span>
-        </Btn>
+        </BtnLink>
       </QuietRow>
     </RoundScreen>
   )

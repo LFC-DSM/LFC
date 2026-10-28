@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { Link } from 'react-router-dom'
 import { Btn } from '../design/Button'
 
 export default function MyPage() {
@@ -16,7 +17,7 @@ export default function MyPage() {
           </a>
           <a href="#balances">내 재화</a>
           <a href="#theme">테마 설정</a>
-          <a href="?page=home-guest">로그아웃 ↗</a>
+          <Link to="/login">로그아웃 ↗</Link>
         </aside>
         <section>
           <div className="panel" id="profile">

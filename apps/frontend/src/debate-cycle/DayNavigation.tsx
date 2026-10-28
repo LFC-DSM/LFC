@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
 const StageNavigation = styled.nav`
   display: grid;
@@ -97,9 +98,9 @@ export default function DayNavigation({ day }: { day: number }) {
   return (
     <StageNavigation aria-label="일차별 페이지 이동">
       {stages.map((stage) => (
-        <a
+        <Link
           key={stage.day}
-          href={'?day=' + stage.day}
+          to={`/day/${stage.day}`}
           aria-current={day === stage.day ? 'page' : undefined}
         >
           <span className="stage-icon" aria-hidden="true">
@@ -112,7 +113,7 @@ export default function DayNavigation({ day }: { day: number }) {
           <span className="stage-arrow" aria-hidden="true">
             ↗
           </span>
-        </a>
+        </Link>
       ))}
     </StageNavigation>
   )

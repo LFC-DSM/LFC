@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { Btn } from '../design/Button'
+import { Link } from 'react-router-dom'
+import { BtnLink } from '../design/Button'
 
 export default function LoginPage() {
   return (
@@ -22,22 +23,22 @@ export default function LoginPage() {
           placeholder="비밀번호를 입력하세요"
           autoComplete="current-password"
         />
-        <Btn primary as="a" href="?page=home" css={{ width: '100%', marginTop: '26px' }}>
+        <BtnLink to="/day/1" css={{ width: '100%', marginTop: '26px' }}>
           로그인
-        </Btn>
+        </BtnLink>
         <p className="sub" css={{ textAlign: 'center', marginTop: '24px' }}>
           아직 계정이 없나요?{' '}
-          <a
+          <Link
             css={{
               color: 'var(--deep)',
               fontWeight: 700,
               textDecoration: 'underline',
               textUnderlineOffset: '4px',
             }}
-            href="?page=signup"
+            to="/signup"
           >
             회원가입
-          </a>
+          </Link>
         </p>
       </section>
     </>
