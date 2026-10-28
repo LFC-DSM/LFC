@@ -5,6 +5,7 @@ import { PassportModule } from '@nestjs/passport'
 import { Test, TestingModule } from '@nestjs/testing'
 import { AccessTokenStrategy } from '../../../src/global/jwt/access-token.strategy'
 import { GlobalJwtModule } from '../../../src/global/jwt/jwt.module'
+import { JwtTokenService } from '../../../src/global/jwt/jwt-token.service'
 import { RefreshTokenStrategy } from '../../../src/global/jwt/refresh-token.strategy'
 import { ACCESS_SECRET, authenticate, REFRESH_SECRET, signToken } from './jwt-test.util'
 
@@ -45,8 +46,8 @@ describe('GlobalJwtModule', () => {
     const exportsMetadata = Reflect.getMetadata('exports', GlobalJwtModule) as unknown[]
 
     expect(imports).toEqual([PassportModule, JwtModule])
-    expect(providers).toEqual([AccessTokenStrategy, RefreshTokenStrategy])
-    expect(exportsMetadata).toEqual([JwtModule, PassportModule])
+    expect(providers).toEqual([AccessTokenStrategy, RefreshTokenStrategy, JwtTokenService])
+    expect(exportsMetadata).toEqual([JwtModule, PassportModule, JwtTokenService])
 
     const jwtContext = moduleRef.select(GlobalJwtModule)
     expect(jwtContext.get(AccessTokenStrategy)).toBeInstanceOf(AccessTokenStrategy)
