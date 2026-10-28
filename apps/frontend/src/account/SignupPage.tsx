@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { Btn } from '../design/Button'
+import { Link } from 'react-router-dom'
+import { Btn, BtnLink } from '../design/Button'
 
 export default function SignupPage() {
   return (
@@ -36,14 +37,14 @@ export default function SignupPage() {
           placeholder="비밀번호를 다시 입력하세요"
           autoComplete="new-password"
         />
-        <Btn primary as="a" href="?page=login" css={{ width: '100%', marginTop: '26px' }}>
+        <BtnLink to="/login" css={{ width: '100%', marginTop: '26px' }}>
           회원가입
-        </Btn>
+        </BtnLink>
         <p className="sub" css={{ textAlign: 'center', marginTop: '24px' }}>
           이미 계정이 있나요?{' '}
-          <a css={{ color: 'var(--jade)' }} href="?page=login">
+          <Link css={{ color: 'var(--jade)' }} to="/login">
             로그인
-          </a>
+          </Link>
         </p>
       </section>
     </>

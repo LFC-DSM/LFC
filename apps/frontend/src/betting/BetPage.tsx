@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { Btn } from '../design/Button'
+import { Link } from 'react-router-dom'
+import { Btn, BtnLink } from '../design/Button'
 
 export default function BetPage() {
   return (
@@ -55,9 +56,9 @@ export default function BetPage() {
             <span>선택한 진영</span>
             <b css={{ color: 'var(--jade)' }}>찬성</b>
           </div>
-          <Btn primary as="a" href="?page=prompt">
+          <BtnLink primary to="/prompt">
             베팅 후 프롬프트 작성 <span>↗</span>
-          </Btn>
+          </BtnLink>
           <p className="empty-note">
             TK는 출석 체크와 베팅 승리 등으로 얻습니다. 상점에서 사용하는 CRD와는 별개입니다.
           </p>

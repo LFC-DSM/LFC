@@ -1,5 +1,6 @@
 import clsx from 'clsx'
-import { Btn } from '../design/Button'
+import { Link, useLocation } from 'react-router-dom'
+import { Btn, BtnLink } from '../design/Button'
 
 export interface HeaderUser {
   name: string
@@ -12,26 +13,26 @@ export interface HeaderProps {
 }
 
 export default function Header({ user }: HeaderProps) {
-  const page = new URLSearchParams(window.location.search).get('page') ?? 'home'
+  const { pathname } = useLocation()
+  const onArchive = pathname.startsWith('/archive')
+  const onShop = pathname === '/shop'
+  const onMe = pathname === '/me'
 
   return user ? (
     <header>
-      <a className="brand" href="?page=home">
+      <Link className="brand" to="/day/1">
         ◈ LFC{' '}
-      </a>
+      </Link>
       <nav>
-        <a
-          className={clsx({ active: !['archive', 'replay', 'shop', 'mypage'].includes(page) })}
-          href="?page=home"
-        >
+        <Link className={clsx({ active: !onArchive && !onShop && !onMe })} to="/day/1">
           이번 토론
-        </a>
-        <a className={clsx({ active: ['archive', 'replay'].includes(page) })} href="?page=archive">
+        </Link>
+        <Link className={clsx({ active: onArchive })} to="/archive">
           지난 토론
-        </a>
-        <a className={clsx({ active: page === 'shop' })} href="?page=shop">
+        </Link>
+        <Link className={clsx({ active: onShop })} to="/shop">
           상점
-        </a>
+        </Link>
       </nav>
       <div className="account">
         <span className="wallet">
@@ -39,21 +40,21 @@ export default function Header({ user }: HeaderProps) {
           <span className="coin">✦ {user.shopBalance.toLocaleString()}</span>{' '}
           <span className="muted">CRD</span>
         </span>
-        <a href="?page=mypage">
+        <Link to="/me">
           <span className="avatar">{user.name.slice(0, 1)}</span>&nbsp;{user.name} 님⌄
-        </a>
+        </Link>
       </div>
     </header>
   ) : (
     <header>
-      <a className="brand" href="?page=login">
+      <Link className="brand" to="/login">
         ◈ LFC
-      </a>
+      </Link>
       <div className="account">
-        <a href="?page=login">로그인</a>
-        <Btn primary small as="a" href="?page=signup">
+        <Link to="/login">로그인</Link>
+        <BtnLink primary small to="/signup">
           회원가입
-        </Btn>
+        </BtnLink>
       </div>
     </header>
   )

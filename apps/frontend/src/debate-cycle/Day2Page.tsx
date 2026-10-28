@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
-import { Btn } from '../design/Button'
+import { Btn, BtnLink } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow, SampleNote } from './RoundLayouts'
 
 export default function Day2Page() {
@@ -55,9 +56,7 @@ export default function Day2Page() {
             </AmountValue>
             <SideBottom>
               <span>찬성 진영</span>
-              <Btn as="a" href="?page=bet">
-                베팅하러 가기 ↗
-              </Btn>
+              <BtnLink to="/bet">베팅하러 가기 ↗</BtnLink>
             </SideBottom>
           </Side>
           <Side con>
@@ -77,9 +76,7 @@ export default function Day2Page() {
             </AmountValue>
             <SideBottom>
               <span>반대 진영</span>
-              <Btn as="a" href="?page=bet">
-                베팅하러 가기 ↗
-              </Btn>
+              <BtnLink to="/bet">베팅하러 가기 ↗</BtnLink>
             </SideBottom>
           </Side>
         </Sides>
@@ -89,9 +86,7 @@ export default function Day2Page() {
           이미 진영을 선택했나요?
           <br />내 진영의 프롬프트를 함께 다듬어보세요.
         </p>
-        <Btn primary as="a" href="?page=prompt">
-          내 진영 프롬프트 작성 ↗
-        </Btn>
+        <BtnLink to="/prompt">내 진영 프롬프트 작성 ↗</BtnLink>
       </QuietRow>
       <SampleNote>
         베팅 금액과 비율은 화면 구성을 위한 예시 데이터입니다. TK는 베팅, CRD는 상점에서 사용합니다.

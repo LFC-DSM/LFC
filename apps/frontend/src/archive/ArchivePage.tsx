@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Link } from 'react-router-dom'
+
 export default function ArchivePage() {
   return (
     <>
@@ -28,91 +30,97 @@ export default function ArchivePage() {
             <tr>
               <td className="muted">11</td>
               <td>
-                <a href="?page=replay">2026. 10. 18 · AI 창작물에도 저작권을 인정해야 할까요?</a>
+                <Link to="/archive/replay">
+                  2026. 10. 18 · AI 창작물에도 저작권을 인정해야 할까요?
+                </Link>
               </td>
               <td className="muted">10. 18</td>
               <td>
                 <span className="badge">토론 종료</span>
               </td>
               <td>
-                <a href="?page=replay" aria-label="토론 다시 보기">
+                <Link to="/archive/replay" aria-label="토론 다시 보기">
                   ↗
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
               <td className="muted">10</td>
               <td>
-                <a href="?page=replay">2026. 10. 15 · 주 4일 근무제를 도입해야 할까요?</a>
+                <Link to="/archive/replay">2026. 10. 15 · 주 4일 근무제를 도입해야 할까요?</Link>
               </td>
               <td className="muted">10. 15</td>
               <td>
                 <span className="badge">토론 종료</span>
               </td>
               <td>
-                <a href="?page=replay" aria-label="토론 다시 보기">
+                <Link to="/archive/replay" aria-label="토론 다시 보기">
                   ↗
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
               <td className="muted">09</td>
               <td>
-                <a href="?page=replay">2026. 10. 12 · 동물실험을 계속 허용해야 할까요?</a>
+                <Link to="/archive/replay">2026. 10. 12 · 동물실험을 계속 허용해야 할까요?</Link>
               </td>
               <td className="muted">10. 12</td>
               <td>
                 <span className="badge">토론 종료</span>
               </td>
               <td>
-                <a href="?page=replay" aria-label="토론 다시 보기">
+                <Link to="/archive/replay" aria-label="토론 다시 보기">
                   ↗
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
               <td className="muted">08</td>
               <td>
-                <a href="?page=replay">2026. 10. 09 · AI 교사가 인간 교사를 대체할 수 있을까요?</a>
+                <Link to="/archive/replay">
+                  2026. 10. 09 · AI 교사가 인간 교사를 대체할 수 있을까요?
+                </Link>
               </td>
               <td className="muted">10. 9</td>
               <td>
                 <span className="badge">토론 종료</span>
               </td>
               <td>
-                <a href="?page=replay" aria-label="토론 다시 보기">
+                <Link to="/archive/replay" aria-label="토론 다시 보기">
                   ↗
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
               <td className="muted">07</td>
               <td>
-                <a href="?page=replay">2026. 10. 06 · 기본소득은 필요한 제도일까요?</a>
+                <Link to="/archive/replay">2026. 10. 06 · 기본소득은 필요한 제도일까요?</Link>
               </td>
               <td className="muted">10. 6</td>
               <td>
                 <span className="badge">토론 종료</span>
               </td>
               <td>
-                <a href="?page=replay" aria-label="토론 다시 보기">
+                <Link to="/archive/replay" aria-label="토론 다시 보기">
                   ↗
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
               <td className="muted">06</td>
               <td>
-                <a href="?page=replay">2026. 10. 03 · 자율주행차의 판단을 신뢰할 수 있을까요?</a>
+                <Link to="/archive/replay">
+                  2026. 10. 03 · 자율주행차의 판단을 신뢰할 수 있을까요?
+                </Link>
               </td>
               <td className="muted">10. 3</td>
               <td>
                 <span className="badge">토론 종료</span>
               </td>
               <td>
-                <a href="?page=replay" aria-label="토론 다시 보기">
+                <Link to="/archive/replay" aria-label="토론 다시 보기">
                   ↗
-                </a>
+                </Link>
               </td>
             </tr>
           </tbody>

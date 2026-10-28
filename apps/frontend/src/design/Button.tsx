@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 
 export const Btn = styled.button<{ primary?: boolean; small?: boolean }>`
   display: inline-flex;
@@ -39,3 +40,5 @@ export const Btn = styled.button<{ primary?: boolean; small?: boolean }>`
     transition: none;
   }
 `
+
+export const BtnLink = Btn.withComponent(Link)
