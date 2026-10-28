@@ -3,18 +3,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
+import { Badge } from '../design/Badge'
 
 export default function DebatePage() {
   const [tocOpen, setTocOpen] = useState(true)
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DAY 03 · LIVE DEBATE</div>
+        <div css={eyeBrowCss}>DAY 03 · LIVE DEBATE</div>
         <h1 className="page-title">인공지능이 만든 창작물에도 저작권을 인정해야 할까요?</h1>
         <div className="sub">우리의 프롬프트로 시작된 두 AI의 토론을 함께 지켜보세요.</div>
       </div>
       <div className="topline" css={{ marginBottom: '20px' }}>
-        <span className="badge">● LIVE　·　찬성측 입론 진행 중</span>
+        <Badge>● LIVE　·　찬성측 입론 진행 중</Badge>
         <Btn small>♫ 음성으로 듣기</Btn>
       </div>
       <Btn
@@ -48,7 +50,7 @@ export default function DebatePage() {
             <div className="msghead">
               <span className="avatar">A</span>
               <b>찬성 AI</b>
-              <span className="badge">찬성측 입론</span>
+              <Badge>찬성측 입론</Badge>
               <small>14:30</small>
             </div>
             <p>
@@ -66,7 +68,7 @@ export default function DebatePage() {
             <div className="msghead">
               <span className="avatar">B</span>
               <b>반대 AI</b>
-              <span className="badge">반대측 입론</span>
+              <Badge>반대측 입론</Badge>
               <small>14:33</small>
             </div>
             <p>
@@ -83,7 +85,7 @@ export default function DebatePage() {
             <div className="msghead">
               <span className="avatar">A</span>
               <b>찬성 AI</b>
-              <span className="badge">찬성측 반론</span>
+              <Badge>찬성측 반론</Badge>
               <small>14:36</small>
             </div>
             <p>
@@ -100,7 +102,7 @@ export default function DebatePage() {
             <div className="msghead">
               <span className="avatar">B</span>
               <b>반대 AI</b>
-              <span className="badge">반대측 반론</span>
+              <Badge>반대측 반론</Badge>
               <small>14:39</small>
             </div>
             <p>
@@ -117,7 +119,7 @@ export default function DebatePage() {
             <div className="msghead">
               <span className="avatar">A</span>
               <b>찬성 AI</b>
-              <span className="badge">최종 발언</span>
+              <Badge>최종 발언</Badge>
               <small>14:42</small>
             </div>
             <p>
@@ -133,7 +135,7 @@ export default function DebatePage() {
         </section>
         <aside className="panel">
           <h3>
-            실시간 채팅 <span className="badge">LIVE</span>
+            실시간 채팅 <Badge>LIVE</Badge>
           </h3>
           <p className="empty-note">함께 만드는 토론의 공간</p>
           <div className="superchat">

@@ -3,18 +3,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
+import { Badge } from '../design/Badge'
 
 export default function ReplayPage() {
   const [tocOpen, setTocOpen] = useState(true)
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DEBATE ARCHIVE · REPLAY</div>
+        <div css={eyeBrowCss}>DEBATE ARCHIVE · REPLAY</div>
         <h1 className="page-title">인공지능이 만든 창작물에도 저작권을 인정해야 할까요?</h1>
         <div className="sub">2026. 10. 18 · 제11회 토론 기록</div>
       </div>
       <div className="topline" css={{ marginBottom: '20px' }}>
-        <span className="badge">종료된 토론</span>
+        <Badge>종료된 토론</Badge>
         <Btn small>♫ 음성으로 듣기</Btn>
       </div>
       <Btn
@@ -48,7 +50,7 @@ export default function ReplayPage() {
             <div className="msghead">
               <span className="avatar">A</span>
               <b>찬성 AI</b>
-              <span className="badge">찬성측 입론</span>
+              <Badge>찬성측 입론</Badge>
               <small>14:30</small>
             </div>
             <p>
@@ -66,7 +68,7 @@ export default function ReplayPage() {
             <div className="msghead">
               <span className="avatar">B</span>
               <b>반대 AI</b>
-              <span className="badge">반대측 입론</span>
+              <Badge>반대측 입론</Badge>
               <small>14:33</small>
             </div>
             <p>
@@ -83,7 +85,7 @@ export default function ReplayPage() {
             <div className="msghead">
               <span className="avatar">A</span>
               <b>찬성 AI</b>
-              <span className="badge">찬성측 반론</span>
+              <Badge>찬성측 반론</Badge>
               <small>14:36</small>
             </div>
             <p>
@@ -100,7 +102,7 @@ export default function ReplayPage() {
             <div className="msghead">
               <span className="avatar">B</span>
               <b>반대 AI</b>
-              <span className="badge">반대측 반론</span>
+              <Badge>반대측 반론</Badge>
               <small>14:39</small>
             </div>
             <p>
@@ -117,7 +119,7 @@ export default function ReplayPage() {
             <div className="msghead">
               <span className="avatar">A</span>
               <b>찬성 AI</b>
-              <span className="badge">최종 발언</span>
+              <Badge>최종 발언</Badge>
               <small>14:42</small>
             </div>
             <p>
@@ -131,14 +133,14 @@ export default function ReplayPage() {
             </div>
           </article>
           <div className="panel">
-            <span className="badge">토론 결과 · 예시</span>
+            <Badge>토론 결과 · 예시</Badge>
             <h3 css={{ marginTop: '18px' }}>서로의 관점을 넓힌 토론</h3>
             <p className="sub">판정 근거와 양측 AI의 소감이 표시되는 영역입니다.</p>
           </div>
         </section>
         <aside className="panel">
           <h3>
-            실시간 채팅 <span className="badge">LIVE</span>
+            실시간 채팅 <Badge>LIVE</Badge>
           </h3>
           <p className="empty-note">함께 만드는 토론의 공간</p>
           <div className="superchat">

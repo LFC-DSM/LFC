@@ -1,14 +1,13 @@
-import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
-import { Btn, BtnLink } from '../design/Button'
+import { BtnLink } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow, SampleNote } from './RoundLayouts'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function Day2Page() {
   return (
     <RoundScreen>
       <RoundMeta>
-        <span className="eyebrow">ROUND 12 / CHOOSE YOUR SIDE</span>
-        <small>DAY 2 · 진영 선택 & 프롬프트</small>
+        <span css={eyeBrowCss}>ROUND 12 / CHOOSE YOUR SIDE</span>
       </RoundMeta>
       <RoundHeading>
         어느 쪽의 생각에
@@ -285,10 +284,5 @@ const SideBottom = styled.div`
   flex-wrap: wrap;
   span {
     font-size: 14px;
-  }
-  @media (max-width: 720px) {
-    ${Btn} {
-      width: 100%;
-    }
   }
 `
