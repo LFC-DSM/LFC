@@ -1,12 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from 'react-router-dom'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function PromptPage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DAY 02 · CO-WRITING</div>
+        <div css={eyeBrowCss}>DAY 02 · CO-WRITING</div>
         <h1 className="page-title">생각을 모아, 더 단단한 논리로.</h1>
         <div className="sub">
           내가 선택한 찬성 진영의 공동 프롬프트입니다. 상대 진영의 문서는 공개되지 않습니다.

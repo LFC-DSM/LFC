@@ -1,12 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from 'react-router-dom'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function MyPage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">MY SPACE</div>
+        <div css={eyeBrowCss}>MY SPACE</div>
         <h1 className="page-title">나의 공간</h1>
         <div className="sub">계정 정보와 나만의 토론 환경을 관리하세요.</div>
       </div>

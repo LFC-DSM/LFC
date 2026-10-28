@@ -79,12 +79,6 @@ export const DesignSurface = styled.div`
     margin: auto;
     padding: 34px 30px 72px;
   }
-  .eyebrow {
-    font-size: 14px;
-    letter-spacing: 1.6px;
-    font-weight: 700;
-    color: #467261;
-  }
   .topline {
     display: flex;
     align-items: center;

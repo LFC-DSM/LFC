@@ -3,13 +3,14 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function ReplayPage() {
   const [tocOpen, setTocOpen] = useState(true)
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DEBATE ARCHIVE · REPLAY</div>
+        <div css={eyeBrowCss}>DEBATE ARCHIVE · REPLAY</div>
         <h1 className="page-title">인공지능이 만든 창작물에도 저작권을 인정해야 할까요?</h1>
         <div className="sub">2026. 10. 18 · 제11회 토론 기록</div>
       </div>

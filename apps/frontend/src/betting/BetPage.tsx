@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
-import { Link } from 'react-router-dom'
 import { Btn, BtnLink } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function BetPage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DAY 02 · CHOOSE YOUR SIDE</div>
+        <div css={eyeBrowCss}>DAY 02 · CHOOSE YOUR SIDE</div>
         <h1 className="page-title">당신은 어느 쪽의 생각인가요?</h1>
         <div className="sub">
           진영을 선택하고 TK를 베팅하세요. 선택한 진영의 프롬프트에만 참여할 수 있습니다.

@@ -1,11 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from 'react-router-dom'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function ArchivePage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">THE CONVERSATION CONTINUES</div>
+        <div css={eyeBrowCss}>THE CONVERSATION CONTINUES</div>
         <h1 className="page-title">지나간 토론, 남아 있는 생각.</h1>
         <div className="sub">함께 만든 질문과 논리를 다시 만나보세요.</div>
       </div>

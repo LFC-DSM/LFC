@@ -1,12 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from 'react-router-dom'
 import { Btn, BtnLink } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function SignupPage() {
   return (
     <>
       <section className="auth panel">
-        <span className="eyebrow">WELCOME TO LFC</span>
+        <span css={eyeBrowCss}>WELCOME TO LFC</span>
         <h1>함께 생각하는 즐거움.</h1>
         <p className="sub">나의 질문으로 새로운 토론을 시작하세요.</p>
         <label htmlFor="auth-name">이름</label>

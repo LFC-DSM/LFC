@@ -3,13 +3,14 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function DebatePage() {
   const [tocOpen, setTocOpen] = useState(true)
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DAY 03 · LIVE DEBATE</div>
+        <div css={eyeBrowCss}>DAY 03 · LIVE DEBATE</div>
         <h1 className="page-title">인공지능이 만든 창작물에도 저작권을 인정해야 할까요?</h1>
         <div className="sub">우리의 프롬프트로 시작된 두 AI의 토론을 함께 지켜보세요.</div>
       </div>
