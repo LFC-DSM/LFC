@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
+import { MoneyLog } from './money-log.entity'
 
 @Entity('member')
 export class Member {
@@ -13,4 +14,7 @@ export class Member {
 
   @Column({ length: 50 })
   username: string
+
+  @OneToMany(() => MoneyLog, (moneyLog) => moneyLog.member)
+  moneyLogs: MoneyLog[]
 }
