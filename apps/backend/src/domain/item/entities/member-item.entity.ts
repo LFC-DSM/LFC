@@ -1,0 +1,18 @@
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Member } from '../../member/entities/member.entity'
+import { Item } from './item.entity'
+
+@Entity('member_item')
+export class MemberItem {
+  @PrimaryGeneratedColumn({ type: 'bigint' })
+  id: number
+
+  @ManyToOne(() => Member)
+  member: Member
+
+  @ManyToOne(() => Item, (item) => item.memberItems)
+  item: Item
+
+  @Column({ type: 'int', default: 1 })
+  quantity: number
+}

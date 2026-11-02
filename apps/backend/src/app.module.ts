@@ -5,6 +5,8 @@ import { AppConfigModule } from './global/config/config.module'
 import { GlobalJwtModule } from './global/jwt/jwt.module'
 import { SecurityModule } from './global/security/security.module'
 import { AuthModule } from './domain/auth/auth.module'
+import { DebateModule } from './domain/debate/debate.module'
+import { ItemModule } from './domain/item/item.module'
 import { MemberModule } from './domain/member/member.module'
 import { DatabaseModule } from './infrastructure/database/database.module'
 import { RedisModule } from './infrastructure/redis/redis.module'
@@ -17,6 +19,8 @@ import { RedisModule } from './infrastructure/redis/redis.module'
     GlobalJwtModule,
     SecurityModule,
     MemberModule,
+    DebateModule,
+    ItemModule,
     AuthModule,
   ],
   controllers: [AppController],
