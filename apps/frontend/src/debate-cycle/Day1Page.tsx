@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
 import { Btn, BtnLink } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow } from './RoundLayouts'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 const topics = [
   {
@@ -22,8 +23,7 @@ export default function Day1Page() {
   return (
     <RoundScreen>
       <RoundMeta>
-        <span>ROUND 12 / TOPIC SELECTION</span>
-        <small>DAY 1 · 주제 투표</small>
+        <span css={eyeBrowCss}>ROUND 12 / TOPIC SELECTION</span>
       </RoundMeta>
       <RoundHeading>주제 투표</RoundHeading>
       <VoteSelection>

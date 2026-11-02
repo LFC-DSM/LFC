@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
 import { Btn, BtnLink } from '../design/Button'
 import { RoundScreen, RoundMeta, RoundHeading, QuietRow } from './RoundLayouts'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function Day3Page() {
   return (
     <RoundScreen>
       <RoundMeta>
-        <span className="eyebrow">ROUND 12 / THE DEBATE</span>
-        <small>DAY 3 · AI 토론</small>
+        <span css={eyeBrowCss}>ROUND 12 / THE DEBATE</span>
       </RoundMeta>
       <RoundHeading>
         인공지능이 만든 창작물에도

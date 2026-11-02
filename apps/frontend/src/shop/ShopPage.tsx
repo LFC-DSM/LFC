@@ -1,17 +1,20 @@
+/** @jsxImportSource @emotion/react */
 import clsx from 'clsx'
 import { Btn } from '../design/Button'
 import { categories, products } from './products'
+import { eyeBrowCss } from '../design/Eyebrow'
+import { Badge } from '../design/Badge'
 
 export default function ShopPage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">A LITTLE MORE YOU</div>
+        <div css={eyeBrowCss}>A LITTLE MORE YOU</div>
         <h1 className="page-title">생각을 표현하는, 나만의 방식.</h1>
         <div className="sub">채팅을 꾸미고, 의견을 강조하고, 마음에 드는 논리에 반응해 보세요.</div>
       </div>
       <div className="topline">
-        <div className="badge">✦ 보유 상점 재화　2,400 CRD</div>
+        <Badge>✦ 보유 상점 재화　2,400 CRD</Badge>
         <input
           className="search"
           id="product-search"
@@ -40,7 +43,7 @@ export default function ShopPage() {
                 product.icon
               )}
             </div>
-            <span className="badge">{product.tag}</span>
+            <Badge css={{ marginTop: '20px', fontSize: '13px' }}>{product.tag}</Badge>
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <div className="product-price">

@@ -1,11 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
 
 export default function VotePage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DAY 01 · TOPIC VOTE</div>
+        <div css={eyeBrowCss}>DAY 01 · TOPIC VOTE</div>
         <h1 className="page-title">어떤 주제로 이야기해 볼까요?</h1>
         <div className="sub">
           다음 토론의 주제를 직접 골라주세요. 가장 많은 선택을 받은 질문으로 토론을 시작합니다.

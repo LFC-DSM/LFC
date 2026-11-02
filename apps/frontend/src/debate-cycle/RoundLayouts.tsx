@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { Btn } from '../design/Button'
 
 export const RoundScreen = styled.section``
 

@@ -79,12 +79,6 @@ export const DesignSurface = styled.div`
     margin: auto;
     padding: 34px 30px 72px;
   }
-  .eyebrow {
-    font-size: 14px;
-    letter-spacing: 1.6px;
-    font-weight: 700;
-    color: #467261;
-  }
   .topline {
     display: flex;
     align-items: center;
@@ -105,17 +99,6 @@ export const DesignSurface = styled.div`
     line-height: 1.45;
     margin: 12px 0;
   }
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
-    border: 1.5px solid var(--stroke);
-    border-radius: 4px;
-    background: #e9f6ed;
-    color: var(--ink);
-    font-size: 14px;
-    font-weight: 600;
-  }
   .hero {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -128,12 +111,6 @@ export const DesignSurface = styled.div`
   }
   .hero-copy {
     padding: 42px 40px 44px;
-  }
-  .hero .badge {
-    background: #fff3b7;
-    transform: rotate(-2deg);
-    font-size: 14px;
-    padding: 8px 12px;
   }
   .hero h1 {
     font-size: clamp(37px, 4vw, 56px);
@@ -206,12 +183,6 @@ export const DesignSurface = styled.div`
   }
   .card .muted {
     font-size: 15px;
-  }
-  .card:nth-child(2) > .topline .badge {
-    background: #eee8ff;
-  }
-  .card:nth-child(3) > .topline .badge {
-    background: #fff2be;
   }
   .progress {
     height: 9px;
@@ -503,10 +474,6 @@ export const DesignSurface = styled.div`
   }
   .product-art.blue {
     background: #e8e2f6;
-  }
-  .product .badge {
-    margin-top: 20px;
-    font-size: 13px;
   }
   .product h3 {
     margin-top: 12px;
@@ -801,9 +768,6 @@ export const DesignSurface = styled.div`
     .msghead {
       gap: 8px;
       font-size: 14px;
-    }
-    .msghead .badge {
-      font-size: 12px;
     }
     .search {
       max-width: 100%;

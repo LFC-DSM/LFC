@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "extract-shared-style": {
+      "source": "./.agent/skills/extract-shared-style",
+      "sourceType": "local",
+      "computedHash": "c4715b8ca3871c91602c12f198d9be2c8b0c3e9e929b1b8bbfa0105397d0f5b3"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",

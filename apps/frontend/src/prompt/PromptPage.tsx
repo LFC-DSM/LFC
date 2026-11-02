@@ -1,12 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from 'react-router-dom'
 import { Btn } from '../design/Button'
+import { eyeBrowCss } from '../design/Eyebrow'
+import { Badge } from '../design/Badge'
 
 export default function PromptPage() {
   return (
     <>
       <div className="title-row">
-        <div className="eyebrow">DAY 02 · CO-WRITING</div>
+        <div css={eyeBrowCss}>DAY 02 · CO-WRITING</div>
         <h1 className="page-title">생각을 모아, 더 단단한 논리로.</h1>
         <div className="sub">
           내가 선택한 찬성 진영의 공동 프롬프트입니다. 상대 진영의 문서는 공개되지 않습니다.
@@ -18,7 +20,7 @@ export default function PromptPage() {
             ↶ ↷　│　본문 ⌄　│　<b>B</b> <i>I</i>　≡　☷　↗
           </div>
           <article className="paper">
-            <span className="badge">찬성 진영　·　공동 문서</span>
+            <Badge>찬성 진영　·　공동 문서</Badge>
             <h1>창작의 새로운 가능성을 위해</h1>
             <p className="editor-note">프롬프트 문서 · 최종 수정 14:32 · 예시 화면</p>
             <hr className="divider" />
@@ -42,7 +44,7 @@ export default function PromptPage() {
         </section>
         <aside className="panel">
           <h3>
-            실시간 채팅 <span className="badge">LIVE</span>
+            실시간 채팅 <Badge>LIVE</Badge>
           </h3>
           <p className="empty-note">함께 만드는 토론의 공간</p>
           <div className="superchat">
