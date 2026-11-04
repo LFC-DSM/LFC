@@ -23,6 +23,14 @@ export class RedisService implements OnModuleInit, OnModuleDestroy {
     return this.client.set(key, value, 'EX', ttlSeconds)
   }
 
+  eval(script: string, keys: string[], args: string[]): Promise<unknown> {
+    return this.client.eval(script, keys.length, ...keys, ...args)
+  }
+
+  setIfAbsent(key: string, value: string, ttlSeconds: number): Promise<string | null> {
+    return this.client.set(key, value, 'EX', ttlSeconds, 'NX')
+  }
+
   get(key: string): Promise<string | null> {
     return this.client.get(key)
   }

@@ -11,6 +11,6 @@ export class Member {
   @Column()
   password: string
 
-  @Column({ length: 50 })
+  @Column({ unique: true, length: 50 })
   username: string
 }

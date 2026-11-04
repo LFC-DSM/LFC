@@ -19,6 +19,10 @@ export class MemberRepositoryImpl implements IMemberRepository {
     return this.repo.findOneBy({ email })
   }
 
+  findByUsername(username: string): Promise<Member | null> {
+    return this.repo.findOneBy({ username })
+  }
+
   save(member: Member): Promise<Member> {
     return this.repo.save(member)
   }
