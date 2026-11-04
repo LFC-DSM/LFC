@@ -1,2 +1,2 @@
-pnpm format:check
+node scripts/check-staged-format.mjs
 pnpm lint
