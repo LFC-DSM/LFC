@@ -16,17 +16,32 @@ import { DesignSurface } from './design/DesignSurface'
 import GlobalStyles from './design/GlobalStyles'
 import RootLayout from './layout/RootLayout'
 import AuthLayout from './layout/AuthLayout'
+import { RequireAuth, GuestOnly } from './account/AuthRoute'
+import LogoutPage from './account/LogoutPage'
 
 export default function App() {
   return (
     <DesignSurface>
       <GlobalStyles />
       <Routes>
-        <Route element={<AuthLayout />}>
+        <Route path="/logout" element={<LogoutPage />} />
+        <Route
+          element={
+            <GuestOnly>
+              <AuthLayout />
+            </GuestOnly>
+          }
+        >
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Route>
-        <Route element={<RootLayout />}>
+        <Route
+          element={
+            <RequireAuth>
+              <RootLayout />
+            </RequireAuth>
+          }
+        >
           <Route index element={<Navigate to="/day/1" replace />} />
           <Route path="/day/1" element={<Day1Page />} />
           <Route path="/day/2" element={<Day2Page />} />

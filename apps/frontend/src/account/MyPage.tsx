@@ -18,7 +18,7 @@ export default function MyPage() {
           </a>
           <a href="#balances">내 재화</a>
           <a href="#theme">테마 설정</a>
-          <Link to="/login">로그아웃 ↗</Link>
+          <Link to="/logout">로그아웃 ↗</Link>
         </aside>
         <section>
           <div className="panel" id="profile">
