@@ -72,3 +72,10 @@ pnpm --filter backend dlx @nestjs/cli generate service <name>
 - Functional components only
 - Keep components in `src/` organized by feature, not type
 - `eslint-plugin-react-hooks` is active — satisfy the exhaustive-deps rule; do not disable it
+
+## Commit messages
+
+- Write commit messages in English using Conventional Commits with an explicit app scope: `<type>(backend): <description>` or `<type>(front): <description>`.
+- Choose the type according to the work, such as `feat`, `fix`, `refactor`, `test`, or `docs`. Do not label every change as a fix.
+- Whenever giving the user commit commands or suggested messages, remind them to include the backend/front scope and provide scoped examples.
+- Examples: `feat(backend): implement signup and login`, `refactor(backend): centralize auth exceptions`, `fix(front): handle expired email verification`.

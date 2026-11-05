@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import Header from './Header'
+import { useAuth } from '../account/AuthProvider'
 import Footer from './Footer'
 import DayNavigation from '../debate-cycle/DayNavigation'
 
@@ -19,10 +20,11 @@ const DAY_BY_PATH: Record<string, number> = {
 
 export default function RootLayout() {
   const { pathname } = useLocation()
+  const { user } = useAuth()
   const activeDay = DAY_BY_PATH[pathname] ?? 1
   return (
     <>
-      <Header user={previewUser} />
+      <Header user={user ? { ...previewUser, name: user.username } : null} />
       <main className="container">
         <DayNavigation day={activeDay} />
         <Outlet />

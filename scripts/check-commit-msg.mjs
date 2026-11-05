@@ -2,7 +2,7 @@
 
 import { readFileSync } from 'fs'
 
-const APPS = ['backend', 'frontend']
+const APPS = ['backend', 'front', 'frontend']
 const TYPES = [
   'feat',
   'fix',
@@ -41,7 +41,7 @@ if (!pattern.test(msg)) {
    Examples:
      feat: add user authentication
      fix(backend): resolve connection timeout
-     feat(frontend)!: drop IE11 support
+     feat(front)!: drop IE11 support
 `)
   process.exit(1)
 }
